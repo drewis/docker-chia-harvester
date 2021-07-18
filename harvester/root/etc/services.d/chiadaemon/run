@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv sh
+export HOME=/chia
+exec s6-setuidgid chia chia run_daemon
+

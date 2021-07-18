@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv sh
+export HOME=/chia
+rm ${HOME}/.chia/mainnet/run/chia_harvester.pid
+

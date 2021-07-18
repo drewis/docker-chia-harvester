@@ -1,0 +1,18 @@
+version: "3.2"
+services:
+  harvester:
+    build: harvester
+    ports:
+      - 8448:8448
+    environment:
+      TZ: "America/Denver"
+      USER_ID: 1000
+      GROUP_ID: 1000
+    sysctls:
+      net.ipv6.conf.lo.disable_ipv6: 0
+    volumes:
+      - /srv/chia/harvester:/chia/.chia
+      - /chia-plots-1:/chia-plots-1
+      - /chia-work:/chia-work
+    restart: always
+

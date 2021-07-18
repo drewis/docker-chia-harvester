@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv sh
+#s6-svwait -u /var/run/s6/services/chiadaemon
+export HOME=/chia
+exec s6-setuidgid chia chia_harvester
+
