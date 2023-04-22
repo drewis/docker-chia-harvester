@@ -11,7 +11,7 @@ services:
     sysctls:
       net.ipv6.conf.lo.disable_ipv6: 0
     volumes:
-      - /srv/chia/harvester:/chia/.chia
+      - /tub/chia/harvester:/chia/.chia
       - /chia/plots1:/chia-plots-1
       - /chia/plots2:/chia-plots-2
       - /chia/plots3:/chia-plots-3

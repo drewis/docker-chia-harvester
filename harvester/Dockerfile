@@ -36,7 +36,7 @@ USER chia
 WORKDIR /chia
 
 # Clone chia
-ARG BRANCH="latest"
+ARG BRANCH="main"
 RUN git clone --branch ${BRANCH} https://github.com/Chia-Network/chia-blockchain.git \
 && cd chia-blockchain \
 && git submodule update --init mozilla-ca
