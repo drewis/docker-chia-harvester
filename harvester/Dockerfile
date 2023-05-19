@@ -37,9 +37,7 @@ WORKDIR /chia
 
 # Clone chia
 ARG BRANCH="main"
-RUN git clone --branch ${BRANCH} https://github.com/Chia-Network/chia-blockchain.git \
-&& cd chia-blockchain \
-&& git submodule update --init mozilla-ca
+RUN git clone --recursive --branch ${BRANCH} https://github.com/Chia-Network/chia-blockchain.git
 
 # Install chia
 RUN cd chia-blockchain \
